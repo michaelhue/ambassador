@@ -23,6 +23,18 @@ class CacheTest extends \PHPUnit_Framework_TestCase {
 		}
 	}
 
+	public function testNonExistingCacheDirectory() {
+		$result = '';
+		try {
+			$cache = new Cache('tests/tmp/invalid');
+		} catch (Exception $e) {
+			$result = $e->getMessage();
+		}
+		
+		$expected = "Could not initialize cache: Directory 'tests/tmp/invalid' does not exist.";
+		$this->assertEquals($expected, $result);
+	}
+
 	public function testWrite() {
 		$this->cache->write('cache', array('foo' => 'bar'));
 		$this->assertFileExists('tests/tmp/cache');
