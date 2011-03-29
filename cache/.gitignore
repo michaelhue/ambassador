@@ -1,0 +1,3 @@
+# Cache files shall never be tracked by git.
+*
+!.gitignore
