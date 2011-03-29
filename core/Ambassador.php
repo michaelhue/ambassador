@@ -174,7 +174,7 @@ class Ambassador {
 		$sorted = array();
 		foreach ($data as $i => $item) {
 			if (isset($item[$key])) {
-				$sorted[$item[$key]] = $item;
+				$sorted["{$item[$key]}_{$i}"] = $item;
 			} else {
 				$sorted[$i] = $item;
 			}
