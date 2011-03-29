@@ -41,8 +41,8 @@ done using `Ambassador::add()` which takes three parameters:
 3. Actual configuration of the adapter. The parameters may be different for every adapter but 
    most will require at least one parameter (e.g. a Twitter username).
 
+Example configuration for the Twitter adapter:
 
-	// Example configuration for the Twitter adapter.
 	Ambassador::add('tweets', 'Twitter', array('name' => 'johndoe'));
 
 After configuring an adapter you can use `Ambassador::fetch()` to get the data.
