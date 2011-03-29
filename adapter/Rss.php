@@ -9,9 +9,6 @@
 
 namespace ambassador\adapter;
 
-use ambassador\core\Adapter;
-use ambassador\core\AdapterInterface;
-
 /**
  * Rss Adapter for Ambassador
  *
@@ -22,7 +19,7 @@ use ambassador\core\AdapterInterface;
  * - limit (optional)
  * - cache (optional)
  */
-class Rss extends Adapter implements AdapterInterface {
+class Rss extends \ambassador\core\Adapter {
 
 	/**
 	 * Default configuration for this adapter.

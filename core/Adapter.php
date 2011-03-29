@@ -67,6 +67,22 @@ class Adapter {
 		$response = @file_get_contents($url, false, $context); // Suppressing errors is not pretty!
 		return $response;
 	}
+	
+	/**
+	 * Makes a request to the adapter source to retrieve new data.
+	 * 
+	 * @param void
+	 * @return mixed
+	 */
+	public function request() {}
+	
+	/**
+	 * Normalizes the request response data.
+	 *
+	 * @param mixed $input The raw input which will be normalized.
+	 * @return array Returns the input in a normalized multi-dimensional array.
+	 */
+	public function normalize($input) {}
 
 }
 

@@ -9,15 +9,12 @@
 
 namespace ambassador\adapter;
 
-use ambassador\core\Adapter;
-use ambassador\core\AdapterInterface;
-
 /**
  * Github Adapter for Ambassador
  *
  * Fetches a user's public repositories on GitHub.
  */
-class Github extends Adapter implements AdapterInterface {
+class Github extends \ambassador\core\Adapter {
 
 	/**
 	 * Default configuration for this adapter.

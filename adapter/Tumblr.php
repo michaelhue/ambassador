@@ -9,9 +9,6 @@
 
 namespace ambassador\adapter;
 
-use ambassador\core\Adapter;
-use ambassador\core\AdapterInterface;
-
 /**
  * Tumblr Adapter for Ambassador
  *
@@ -24,7 +21,7 @@ use ambassador\core\AdapterInterface;
  * - limit (optional)
  * - page (optional)
  */
-class Tumblr extends Adapter implements AdapterInterface {
+class Tumblr extends \ambassador\core\Adapter {
 
 	/**
 	 * Default configuration for this adapter.

@@ -8,7 +8,6 @@
  */
 
 require_once 'core/Adapter.php';
-require_once 'core/AdapterInterface.php';
 require_once 'adapter/Tumblr.php';
 
 use ambassador\adapter\Tumblr;

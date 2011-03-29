@@ -9,15 +9,12 @@
 
 namespace ambassador\adapter;
 
-use ambassador\core\Adapter;
-use ambassador\core\AdapterInterface;
-
 /**
  * Twitter Adapter for Ambassador
  *
  * Fetches data from a user's public timeline on Twitter. 
  */
-class Twitter extends Adapter implements AdapterInterface {
+class Twitter extends \ambassador\core\Adapter {
 
 	/**
 	 * Default configuration for this adapter.
