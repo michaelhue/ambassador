@@ -7,19 +7,7 @@
  * @copyright Copyright 2011, Think + Craft (http://thinkandcraft.com)
  */
 
-require_once 'core/Adapter.php';
-require_once 'core/AdapterInterface.php';
-require_once 'adapter/Rss.php';
-
-use ambassador\adapter\Rss;
-
-class MockRss extends Rss {
-
-	protected function _request($url, array $data = array(), array $options = array()) {
-		return compact('url', 'data', 'options');
-	}
-
-}
+require_once 'tests/mocks/adapter/MockRss.php';
 
 class RssTest extends \PHPUnit_Framework_TestCase {
 
