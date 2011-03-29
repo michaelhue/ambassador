@@ -41,8 +41,9 @@ done using `Ambassador::add()` which takes three parameters:
 3. Actual configuration of the adapter. The parameters may be different for every adapter but 
    most will require at least one parameter (e.g. a Twitter username).
 
+
 	// Example configuration for the Twitter adapter.
-	Ambassador::add('tweets', 'Twitter', array('name' => 'michael_hue'));
+	Ambassador::add('tweets', 'Twitter', array('name' => 'johndoe'));
 
 After configuring an adapter you can use `Ambassador::fetch()` to get the data.
 
@@ -50,8 +51,8 @@ After configuring an adapter you can use `Ambassador::fetch()` to get the data.
 
 You may also fetch data from several adapters at once (great for creating activity streams).
 
-	Ambassador::add('tweets', 'Twitter', array('name' => 'michael_hue'));
-	Ambassador::add('posts', 'Tumblr', array('name' => 'michaelhue'));
+	Ambassador::add('tweets', 'Twitter', array('name' => 'johndoe'));
+	Ambassador::add('posts', 'Tumblr', array('name' => 'johndoe'));
 	$stream = Ambassador::fetch(array('tweets', 'posts'));
 
 
