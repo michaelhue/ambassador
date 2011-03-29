@@ -64,7 +64,7 @@ class Rss extends Adapter implements AdapterInterface {
 			);
 			$items[] = $item;
 		}
-		return $items;
+		return array_slice($items, 0, $this->config['limit']);
 	}
 
 }
