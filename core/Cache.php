@@ -27,10 +27,10 @@ class Cache {
 	 * @return void
 	 */
 	public function __construct($dir) {
-		if (!is_dir($dir) && !mkdir($dir, 0777, true)) {
+		if (!is_dir($dir)) {
 			throw new Exception("Could not initialize cache: Directory '{$dir}' does not exist.");
 		}
-		if (!is_writable($dir) && !chmod($dir, 0777)) {
+		if (!is_writable($dir)) {
 			throw new Exception("Could not initialize cache: Directory '{$dir}' not writable.");
 		}
 		$this->_dir = $dir;
