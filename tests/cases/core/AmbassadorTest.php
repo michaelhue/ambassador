@@ -58,6 +58,26 @@ class AmbassadorTest extends \PHPUnit_Framework_TestCase {
 		$result = Ambassador::sort($data, 'title', 'asc');
 		$this->assertEquals($expected, $result);
 	}
+	
+	public function testSortWithDuplicateKeys() {
+		$data = array(
+			array('id' => 1, 'title' => 'a'),
+			array('id' => 2, 'title' => 'a'),
+			array('id' => 3, 'title' => 'b')
+		);
+		
+		$expected = $data;
+		$result = Ambassador::sort($data, 'title', 'asc');
+		$this->assertEquals($expected, $result);
+		
+		$expected = array(
+			array('id' => 3, 'title' => 'b'),
+			array('id' => 2, 'title' => 'a'),
+			array('id' => 1, 'title' => 'a')
+		);
+		$result = Ambassador::sort($data, 'title', 'desc');
+		$this->assertEquals($expected, $result);
+	}
 
 }
 
