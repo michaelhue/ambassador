@@ -119,7 +119,7 @@ class Ambassador {
 		}
 		foreach ($keys as $key) {
 			if ($adapter = static::_fetch($key, $options)) {
-				$data += $adapter;
+				$data = array_merge($data, $adapter);
 			}
 		}
 		if (!empty($data)) {
