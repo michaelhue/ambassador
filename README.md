@@ -4,6 +4,8 @@ Ambassador
 Ambassador is a small and extensible PHP 5.3 library which makes it easy to fetch and display data 
 from various web services, like Twitter or Tumblr.
 
+**Notice:** This library is not under active development anymore and may be deleted soonish.
+
 
 Installation
 ------------
